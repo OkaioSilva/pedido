@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Você quer</title>
+</head>
+<style>
+    body {
+        position: relative;
+        background: rgb(238, 174, 202);
+        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+        font-size: 1.5rem;
+    }
+
+    .painel {
+        margin: auto;
+        background-color: white;
+        width: 80vw;
+        height: 70vh;
+        border-radius: 25px;
+        text-align: center;
+        padding-top: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1816642565699782345/B22404DCBA8248E3B1148ED22C51DECEA8D17CD0/?imw=1200&impolicy=Letterbox);
+        background-size: 100px;
+        background-repeat: repeat;
+        box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+
+
+    }
+
+    #sim {
+
+        height: 50px;
+        width: 75px;
+        background-color: #eb15d9c7;
+        border: 2px solid white;
+        border-radius: 25px;
+        color: #ffffff;
+        margin-left: -70px;
+
+    }
+
+    #nao {
+        position: absolute;
+        height: 50px;
+        width: 75px;
+        background-color: #eb15d9c7;
+        border: 2px solid white;
+        border-radius: 25px;
+        color: #f1f1f1;
+        margin-left: 25px;
+    }
+
+    h1,
+    h2 {
+        color: rgb(243, 243, 243);
+    }
+</style>
+
+<body>
+    <div class="painel">
+        <h1>
+            Este convite é válido até você enjoar
+        </h1>
+        <h2>Você quer fuder comigo ?</h2>
+        <a href="https://wa.me/qr/PVJYPBLPALJJN1"><button id="sim">Sim!</button></a>
+
+        <button onmouseover="fuja()" id="nao">Não!</button>
+
+    </div>
+
+    <script>
+        function fuja() {
+            var botaoNao = document.getElementById("nao")
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = larguraJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+</body>
+
+</html>
