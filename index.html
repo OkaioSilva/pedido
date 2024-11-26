@@ -1,92 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=7">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=7" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Você quer</title>
-</head>
-<style>
+  </head>
+  <style>
     body {
-        background: rgb(238, 174, 202);
-        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
-        font-size: 1.5rem;
+      background: rgb(238, 174, 202);
+      background: radial-gradient(
+        circle,
+        rgba(238, 174, 202, 1) 0%,
+        rgba(148, 187, 233, 1) 100%
+      );
+      font-size: 1.5rem;
     }
 
     .painel {
-        margin: auto;
-        background-color: rgb(144, 116, 65);
-        width: 80vw;
-        height: 70vh;
-        border-radius: 25px;
-        text-align: center;
-        padding-top: 40px;
-        font-family: 'Times New Roman', Times, serif;
-        /* background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1816642565699782345/B22404DCBA8248E3B1148ED22C51DECEA8D17CD0/?imw=1200&impolicy=Letterbox); */
-        background-image: url(http://gifmania.com.br/wp-content/uploads/2020/09/hot_gif.gif);
-        background-size: 100px;
-        background-repeat: repeat;
-        box-shadow: rgba(240, 230, 46, 0.4) 5px 5px, rgba(240, 88, 46, 0.573) 10px 10px, rgba(169, 136, 118, 0.708) 15px 15px, rgba(206, 100, 100, 0.1) 20px 20px, rgba(240, 201, 46, 0.097) 25px 25px;
-        
-        position: relative;
-        
+      margin: auto;
+      background-color: rgb(144, 116, 65);
+      width: 80vw;
+      height: 70vh;
+      border-radius: 25px;
+      text-align: center;
+      padding-top: 40px;
+      font-family: "Times New Roman", Times, serif;
+      /* background-image: url(https://steamuserimages-a.akamaihd.net/ugc/1816642565699782345/B22404DCBA8248E3B1148ED22C51DECEA8D17CD0/?imw=1200&impolicy=Letterbox); */
+      background-image: url(http://gifmania.com.br/wp-content/uploads/2020/09/hot_gif.gif);
+      background-size: 100px;
+      background-repeat: repeat;
+      box-shadow: rgba(240, 230, 46, 0.4) 5px 5px,
+        rgba(240, 88, 46, 0.573) 10px 10px, rgba(169, 136, 118, 0.708) 15px 15px,
+        rgba(206, 100, 100, 0.1) 20px 20px, rgba(240, 201, 46, 0.097) 25px 25px;
+
+      position: relative;
     }
-    #sim, #nao {
-        font-size: 0.8em;
-        height: 50px;
-        width: 75px;
-        background-color: #cb8f4ec7;
-        border: 2px solid rgb(168, 73, 26);
-        border-radius: 25px;
-        color: #efdddd;
-        margin-left: -70px;
-       /*  box-shadow: rgba(237, 240, 46, 0.4) 3px 3px, rgba(240, 91, 46, 0.3) 5px 5px, rgba(240, 240, 46, 0.2) 7px 7px, rgba(148, 55, 32, 0.334) 5px 5px, rgba(240, 46, 170, 0.05) 11px 11px; */
-        
-    }
-    
+    #sim,
     #nao {
-        position: absolute;
-        margin-left: 25px;
+      font-size: 0.8em;
+      height: 50px;
+      width: 75px;
+      background-color: #cb8f4ec7;
+      border: 2px solid rgb(168, 73, 26);
+      border-radius: 25px;
+      color: #efdddd;
+      margin-left: -70px;
+      /*  box-shadow: rgba(237, 240, 46, 0.4) 3px 3px, rgba(240, 91, 46, 0.3) 5px 5px, rgba(240, 240, 46, 0.2) 7px 7px, rgba(148, 55, 32, 0.334) 5px 5px, rgba(240, 46, 170, 0.05) 11px 11px; */
+    }
+    /* .containerResposta{
+        display: flex;
+        flex-wrap: wrap;
+
+    } */
+    .containerResposta {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; /* Espaço entre botões */
+    }
+
+    #nao {
+    position: absolute;
+    left: 70%; /* Centraliza horizontalmente */
+    top: 38%; /* Centraliza verticalmente */
+    transform: translate(-50%, -50%); /* Ajusta a centralização */
+    background-color: #cb8f4ec7;
+    border: 2px solid rgb(168, 73, 26);
+    border-radius: 25px;
+    color: #efdddd;
+    font-size: 0.8em;
+    height: 50px;
+    width: 75px;
+    text-align: center;
     }
 
     h1,
     h2 {
-        color: rgb(4, 0, 0);
+      color: rgb(234, 230, 230);
     }
-</style>
 
-<body>
+    @media (max-width: 600px) {
+    .painel {
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+    }
+}
+  </style>
+
+  <body>
     <div class="painel">
-        <h1>
-            Este convite é válido até você enjoar
-        </h1>
-        <h2>Você quer dormir comigo ?</h2>
-        <div class="containerResposta">
-            <!-- <a href="https://wa.me/qr/PVJYPBLPALJJN1"><button id="sim">Sim!</button></a> -->
-            <a href="img/dc4623502a692317039be2400a5e0375.jpg"><button id="sim">Sim!</button></a>
+      <h1>Aceita me dar aulas particulares ?</h1>
+      <h2>É um convite simples 😊</h2>
+      <div class="containerResposta">
+        <!-- <a href="https://wa.me/qr/PVJYPBLPALJJN1"><button id="sim">Sim!</button></a> -->
+        <!-- <a href="img/dc4623502a692317039be2400a5e0375.jpg"><button id="sim">Sim!</button></a> -->
+        <a
+        href="https://imagens.net.br/wp-content/uploads/2023/09/20-imagens-de-dormir-de-conchinha-meme-para-voc-se-divertir-e-compartilhar-1.jpg"
+        title="Clique para visualizar a imagem"
+        >
+        <!--href="img/dc4623502a692317039be2400a5e0375.jpg" -->
+          <button id="sim">Sim!</button>
+        </a>
 
-            <button onmouseover="fuja()" id="nao">Não!</button>
-        </div>
-
+        <button onmouseover="fuja()" id="nao">Não!</button>
+      </div>
     </div>
 
     <script>
-        function fuja() {
+      /* function fuja() {
             var botaoNao = document.getElementById("nao")
             var larguraJanela = window.innerWidth;
             var alturaJanela = window.innerHeight;
 
             var maxX = larguraJanela - botaoNao.offsetWidth;
-            var maxY = larguraJanela - botaoNao.offsetHeight;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
 
             var aleatorioX = Math.floor(Math.random() * maxX);
             var aleatorioY = Math.floor(Math.random() * maxY);
 
             botaoNao.style.left = aleatorioX + "px";
             botaoNao.style.top = aleatorioY + "px";
-        }
-    </script>
-</body>
+        } */
+      let tentativas = 0;
 
+      function fuja() {
+        tentativas++;
+        if (tentativas > 5) {
+          alert("Ok, talvez seja uma boa ideia dar uma chance!");
+          return;
+        }
+        var botaoNao = document.getElementById("nao");
+        var larguraJanela = window.innerWidth;
+        var alturaJanela = window.innerHeight;
+
+        var maxX = larguraJanela - botaoNao.offsetWidth;
+        var maxY = alturaJanela - botaoNao.offsetHeight;
+
+        var aleatorioX = Math.floor(Math.random() * maxX);
+        var aleatorioY = Math.floor(Math.random() * maxY);
+
+        botaoNao.style.left = aleatorioX + "px";
+        botaoNao.style.top = aleatorioY + "px";
+      }
+    </script>
+  </body>
 </html>
